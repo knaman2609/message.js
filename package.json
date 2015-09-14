@@ -1,11 +1,13 @@
 {
-  "name": "module-name",
+  "name": "message-js",
   "version": "0.0.0",
-  "description": "module-description",
+  "description": "Simple message util",
   "keywords": [
+    "message",
+    "notification"
   ],
-  "main": "module.js",
-  "repository": "knaman2609/Module",
+  "main": "message.js",
+  "repository": "knaman2609/message.js",
   "dependencies": {
     "jquery": "latest"
   },
