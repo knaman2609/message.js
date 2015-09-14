@@ -19,7 +19,7 @@
 
   // the message el
   function messageEl() {
-    return $('<div class="message"> <div class="message__header"></div> <div class="message__close">X</div> <div class="message__body"> </div> </div>');
+    return $('<div class="message"> <div class="message__header"></div> <div class="message__close">&times</div> <div class="message__body"> </div> </div>');
   }
 
   var addListners = function addListners() {
@@ -27,6 +27,11 @@
 
     $close.off('click');
     $close.on('click', this.close.bind(this));
+  };
+
+  var closeNow = function closeNow() {
+    this.$el.removeClass('is-active');
+    this.isOpen = false;
   };
 
   var messageObj = {
@@ -53,10 +58,18 @@
       return this;
     },
 
-    close: function() {
-      if (this.isOpen) {
-        this.$el.removeClass('is-active');
-        this.isOpen = false;
+    close: function(ms) {
+      if (!this.isOpen)
+      return;
+
+      var _this = this;
+
+      if (ms) {
+        setTimeout(function() {
+          closeNow.call(_this);
+        }, ms);
+      } else {
+        closeNow.call(_this);
       }
 
       return this;
@@ -96,4 +109,6 @@
   };
 
   return Message;
+}));
+ssage;
 }));
