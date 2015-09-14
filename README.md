@@ -1,7 +1,7 @@
 ## Message js
-
+![](message.png)
 #### Install
-
+ 
     npm install message-js    
     var Message = require('message-js');
 
