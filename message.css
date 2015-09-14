@@ -1,0 +1,58 @@
+/* Small Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/**
+*
+* Message css
+*
+**/
+.message {
+  width: 200px;
+  border-radius: 2px;
+  position: fixed;
+  left: 50%;
+  margin-left: -100px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  display: none;
+  top: 10px;
+  background: #7FC0C3;
+}
+
+.message__header {
+  padding: 10px;
+}
+
+.message__body {
+  padding: 10px;
+}
+
+.message__close {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  cursor: pointer;
+  font-size: 10px;
+  color: #fff;
+}
+
+.message.is-active {
+  display: block;
+}
+
+.message--success {
+  background: #84E684;
+}
+
+.message--error {
+  background: #FF7536;
+}
+

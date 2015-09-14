@@ -1,6 +1,10 @@
 ;(function($) {
-  var module = new Module();
+  var message = Message();
 
-  // use the module
-  console.log(module);
+  message.create({
+    _class: 'message--error',
+    header: 'Head',
+    body: 'Body',
+  }).open();
+
 })(jQuery);
